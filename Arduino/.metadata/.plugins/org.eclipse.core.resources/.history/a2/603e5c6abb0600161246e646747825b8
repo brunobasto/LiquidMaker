@@ -1,0 +1,15 @@
+config/attinyx5/boardName=ATtiny x5 series
+config/attinyx5/menu_TimerClockSource=default
+config/attinyx5/menu_bod=disable
+config/attinyx5/menu_chip=85
+config/attinyx5/menu_clock=1internal
+config/attinyx5/packageName=ATTinyCore Bruno Basto
+config/attinyx5/platformName=ATTinyCore Bruno Basto
+config/attinyx51/boardName=ATtiny x5 series
+config/attinyx51/menu_TimerClockSource=default
+config/attinyx51/menu_bod=disable
+config/attinyx51/menu_chip=85
+config/attinyx51/menu_clock=1internal
+config/attinyx51/packageName=ATTinyCore_Custom
+config/attinyx51/platformName=ATTinyCore_Custom
+eclipse.preferences.version=1

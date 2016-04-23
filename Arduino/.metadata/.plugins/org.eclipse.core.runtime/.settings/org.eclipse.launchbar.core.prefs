@@ -1,0 +1,6 @@
+activeLaunchTarget=org.eclipse.cdt.arduino.core.connectionType\:Arduino UNO
+configDescList=org.eclipse.cdt.arduino.core.descriptorType\:HelloWorld
+eclipse.preferences.version=1
+org.eclipse.cdt.arduino.core.descriptorType\:Hello\ Arduino/activeLaunchMode=run
+org.eclipse.cdt.arduino.core.descriptorType\:HelloWorld/activeLaunchMode=run
+org.eclipse.cdt.arduino.core.descriptorType\:HelloWorld/activeLaunchTarget=org.eclipse.cdt.arduino.core.connectionType\:as
