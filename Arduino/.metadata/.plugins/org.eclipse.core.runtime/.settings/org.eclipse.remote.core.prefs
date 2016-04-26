@@ -1,3 +1,10 @@
+connections/org.eclipse.cdt.arduino.core.connectionType/168/arduinoBoardName=ATmega168/A/P/PA/PB
+connections/org.eclipse.cdt.arduino.core.connectionType/168/arduinoPackageName=diy_atmega8_series
+connections/org.eclipse.cdt.arduino.core.connectionType/168/arduinoPlatformName=DIY ATmega8, ATmega48, ATmega88, ATmega168, ATmega328
+connections/org.eclipse.cdt.arduino.core.connectionType/168/arduinoPortName=/dev/ttyACM0
+connections/org.eclipse.cdt.arduino.core.connectionType/168/menu_boot=none
+connections/org.eclipse.cdt.arduino.core.connectionType/168/menu_clock=16MHz
+connections/org.eclipse.cdt.arduino.core.connectionType/168/menu_version=atmega168a
 connections/org.eclipse.cdt.arduino.core.connectionType/ATTiny85+8Mhz/arduinoBoardName=ATtiny x5 series
 connections/org.eclipse.cdt.arduino.core.connectionType/ATTiny85+8Mhz/arduinoPackageName=ATTinyCore_Custom
 connections/org.eclipse.cdt.arduino.core.connectionType/ATTiny85+8Mhz/arduinoPlatformName=ATTinyCore_Custom

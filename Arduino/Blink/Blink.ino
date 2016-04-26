@@ -11,7 +11,7 @@
 
   modified 8 May 2014
   by Scott Fitzgerald
- */
+*/
 
 
 // the setup function runs once when you press reset or power the board
@@ -23,7 +23,7 @@ void setup() {
 // the loop function runs over and over again forever
 void loop() {
   digitalWrite(0, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(200);              // wait for a second
+  delay(250);              // wait for a second
   digitalWrite(0, LOW);    // turn the LED off by making the voltage LOW
-  delay(200);              // wait for a second
+  delay(250);              // wait for a second
 }

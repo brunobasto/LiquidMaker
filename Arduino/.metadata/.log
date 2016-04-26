@@ -714,3 +714,1050 @@ java.lang.IllegalArgumentException: Index out of bounds
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1488)
+!SESSION 2016-04-23 12:40:18.947 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_77
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.launchbar.core 2 0 2016-04-23 12:40:23.403
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.arduino.core.descriptorType
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 16 2016-04-23 12:40:27.663
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target. ; version: 1.100.0.v20160217-0435
+!STACK 0
+javax.net.ssl.SSLHandshakeException: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.ssl.Alerts.getSSLException(Alerts.java:192)
+	at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1949)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:302)
+	at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:296)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1509)
+	at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:216)
+	at sun.security.ssl.Handshaker.processLoop(Handshaker.java:979)
+	at sun.security.ssl.Handshaker.process_record(Handshaker.java:914)
+	at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1062)
+	at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1375)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1403)
+	at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1387)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.createLayeredSocket(SSLConnectionSocketFactory.java:290)
+	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:259)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:125)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:319)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.request(IO.java:205)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:68)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:101)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: sun.security.validator.ValidatorException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:387)
+	at sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:292)
+	at sun.security.validator.Validator.validate(Validator.java:260)
+	at sun.security.ssl.X509TrustManagerImpl.validate(X509TrustManagerImpl.java:324)
+	at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:229)
+	at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:124)
+	at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1491)
+	... 26 more
+Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+	at sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+	at sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
+	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
+	... 32 more
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-04-23 12:41:33.961
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1012)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuildConfiguration.calculateScannerInfo(ArduinoBuildConfiguration.java:615)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuildConfiguration.getScannerInfo(ArduinoBuildConfiguration.java:557)
+	at org.eclipse.cdt.arduino.core.internal.ArduinoScannerInfoProvider.getScannerInformation(ArduinoScannerInfoProvider.java:23)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getScannerInfo(TranslationUnit.java:1057)
+	at org.eclipse.cdt.internal.core.pdom.indexer.ProjectIndexerInputAdapter.getBuildConfiguration(ProjectIndexerInputAdapter.java:157)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.getScannerInfo(AbstractIndexerTask.java:1013)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseLinkage(AbstractIndexerTask.java:897)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:554)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:161)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMRebuildTask.run(PDOMRebuildTask.java:90)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-04-23 12:41:33.978
+!MESSAGE An internal error occurred during: "C/C++ Indexer".
+!STACK 0
+java.lang.NullPointerException
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1012)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuildConfiguration.calculateScannerInfo(ArduinoBuildConfiguration.java:615)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuildConfiguration.getScannerInfo(ArduinoBuildConfiguration.java:557)
+	at org.eclipse.cdt.arduino.core.internal.ArduinoScannerInfoProvider.getScannerInformation(ArduinoScannerInfoProvider.java:23)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getScannerInfo(TranslationUnit.java:1057)
+	at org.eclipse.cdt.internal.core.pdom.indexer.ProjectIndexerInputAdapter.getBuildConfiguration(ProjectIndexerInputAdapter.java:157)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.getScannerInfo(AbstractIndexerTask.java:1013)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseLinkage(AbstractIndexerTask.java:897)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:554)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:161)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMRebuildTask.run(PDOMRebuildTask.java:90)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:149)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2016-04-23 12:41:34.195
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.runtime.CoreException: Processing template board.mk
+	at org.eclipse.cdt.arduino.core.internal.ArduinoTemplateGenerator.generateFile(ArduinoTemplateGenerator.java:52)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuildConfiguration.generateMakeFile(ArduinoBuildConfiguration.java:414)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuilder.build(ArduinoBuilder.java:45)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:262)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:402)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:556)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:534)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:111)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate$1.run(LaunchConfigurationDelegate.java:430)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:437)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:130)
+	at org.eclipse.cdt.arduino.core.internal.launch.ArduinoLaunchConfigurationDelegate.buildForLaunch(ArduinoLaunchConfigurationDelegate.java:64)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> recipe_c_combine_pattern  [in template "board.mk" at line 81, column 11]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${recipe_c_combine_pattern}  [in template "board.mk" at line 81, column 9]
+----
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:116)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:346)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:82)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:40)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.MixedContent.accept(MixedContent.java:62)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.Environment.process(Environment.java:290)
+	at freemarker.template.Template.process(Template.java:312)
+	at org.eclipse.cdt.arduino.core.internal.ArduinoTemplateGenerator.generateFile(ArduinoTemplateGenerator.java:41)
+	... 26 more
+!SUBENTRY 1 org.eclipse.cdt.arduino.core 4 0 2016-04-23 12:41:34.195
+!MESSAGE Processing template board.mk
+!STACK 0
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> recipe_c_combine_pattern  [in template "board.mk" at line 81, column 11]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${recipe_c_combine_pattern}  [in template "board.mk" at line 81, column 9]
+----
+
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:116)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:346)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:82)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:40)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.MixedContent.accept(MixedContent.java:62)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.Environment.process(Environment.java:290)
+	at freemarker.template.Template.process(Template.java:312)
+	at org.eclipse.cdt.arduino.core.internal.ArduinoTemplateGenerator.generateFile(ArduinoTemplateGenerator.java:41)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuildConfiguration.generateMakeFile(ArduinoBuildConfiguration.java:414)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuilder.build(ArduinoBuilder.java:45)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:262)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:402)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:556)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:534)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:111)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate$1.run(LaunchConfigurationDelegate.java:430)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:437)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:130)
+	at org.eclipse.cdt.arduino.core.internal.launch.ArduinoLaunchConfigurationDelegate.buildForLaunch(ArduinoLaunchConfigurationDelegate.java:64)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.cdt.arduino.core 4 0 2016-04-23 12:41:34.195
+!MESSAGE Processing template board.mk
+!STACK 0
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> recipe_c_combine_pattern  [in template "board.mk" at line 81, column 11]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${recipe_c_combine_pattern}  [in template "board.mk" at line 81, column 9]
+----
+
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:116)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:346)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:82)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:40)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.MixedContent.accept(MixedContent.java:62)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.Environment.process(Environment.java:290)
+	at freemarker.template.Template.process(Template.java:312)
+	at org.eclipse.cdt.arduino.core.internal.ArduinoTemplateGenerator.generateFile(ArduinoTemplateGenerator.java:41)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuildConfiguration.generateMakeFile(ArduinoBuildConfiguration.java:414)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuilder.build(ArduinoBuilder.java:45)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:262)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:402)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:556)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:534)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:111)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate$1.run(LaunchConfigurationDelegate.java:430)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:437)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:130)
+	at org.eclipse.cdt.arduino.core.internal.launch.ArduinoLaunchConfigurationDelegate.buildForLaunch(ArduinoLaunchConfigurationDelegate.java:64)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 566 2016-04-23 12:41:34.199
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.cdt.arduino.core 4 75 2016-04-23 12:41:34.199
+!MESSAGE Errors running builder 'Arduino Builder' on project 'HelloWorld'.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Processing template board.mk
+	at org.eclipse.cdt.arduino.core.internal.ArduinoTemplateGenerator.generateFile(ArduinoTemplateGenerator.java:52)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuildConfiguration.generateMakeFile(ArduinoBuildConfiguration.java:414)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuilder.build(ArduinoBuilder.java:45)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:262)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:402)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:556)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:534)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:111)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate$1.run(LaunchConfigurationDelegate.java:430)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:437)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:130)
+	at org.eclipse.cdt.arduino.core.internal.launch.ArduinoLaunchConfigurationDelegate.buildForLaunch(ArduinoLaunchConfigurationDelegate.java:64)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> recipe_c_combine_pattern  [in template "board.mk" at line 81, column 11]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${recipe_c_combine_pattern}  [in template "board.mk" at line 81, column 9]
+----
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:116)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:346)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:82)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:40)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.MixedContent.accept(MixedContent.java:62)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.Environment.process(Environment.java:290)
+	at freemarker.template.Template.process(Template.java:312)
+	at org.eclipse.cdt.arduino.core.internal.ArduinoTemplateGenerator.generateFile(ArduinoTemplateGenerator.java:41)
+	... 26 more
+!SUBENTRY 2 org.eclipse.cdt.arduino.core 4 0 2016-04-23 12:41:34.200
+!MESSAGE Processing template board.mk
+!STACK 0
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> recipe_c_combine_pattern  [in template "board.mk" at line 81, column 11]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${recipe_c_combine_pattern}  [in template "board.mk" at line 81, column 9]
+----
+
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:116)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:346)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:82)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:40)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.MixedContent.accept(MixedContent.java:62)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.Environment.process(Environment.java:290)
+	at freemarker.template.Template.process(Template.java:312)
+	at org.eclipse.cdt.arduino.core.internal.ArduinoTemplateGenerator.generateFile(ArduinoTemplateGenerator.java:41)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuildConfiguration.generateMakeFile(ArduinoBuildConfiguration.java:414)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuilder.build(ArduinoBuilder.java:45)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:262)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:402)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:556)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:534)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:111)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate$1.run(LaunchConfigurationDelegate.java:430)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:437)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:130)
+	at org.eclipse.cdt.arduino.core.internal.launch.ArduinoLaunchConfigurationDelegate.buildForLaunch(ArduinoLaunchConfigurationDelegate.java:64)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.cdt.arduino.core 4 0 2016-04-23 12:41:34.200
+!MESSAGE Processing template board.mk
+!STACK 0
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> recipe_c_combine_pattern  [in template "board.mk" at line 81, column 11]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${recipe_c_combine_pattern}  [in template "board.mk" at line 81, column 9]
+----
+
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:116)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:346)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:82)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:40)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.MixedContent.accept(MixedContent.java:62)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.Environment.process(Environment.java:290)
+	at freemarker.template.Template.process(Template.java:312)
+	at org.eclipse.cdt.arduino.core.internal.ArduinoTemplateGenerator.generateFile(ArduinoTemplateGenerator.java:41)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuildConfiguration.generateMakeFile(ArduinoBuildConfiguration.java:414)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuilder.build(ArduinoBuilder.java:45)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:262)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:402)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:556)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:534)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:111)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate$1.run(LaunchConfigurationDelegate.java:430)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:437)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:130)
+	at org.eclipse.cdt.arduino.core.internal.launch.ArduinoLaunchConfigurationDelegate.buildForLaunch(ArduinoLaunchConfigurationDelegate.java:64)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:855)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.core 4 2 2016-04-23 12:41:38.935
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.cdt.core".
+!STACK 0
+java.lang.NullPointerException
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1012)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuildConfiguration.calculateScannerInfo(ArduinoBuildConfiguration.java:615)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuildConfiguration.getScannerInfo(ArduinoBuildConfiguration.java:557)
+	at org.eclipse.cdt.arduino.core.internal.ArduinoScannerInfoProvider.getScannerInformation(ArduinoScannerInfoProvider.java:23)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getScannerInfo(TranslationUnit.java:1057)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:841)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:831)
+	at org.eclipse.cdt.internal.core.model.ASTCache$1.run(ASTCache.java:339)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.cdt.internal.core.model.ASTCache.createAST(ASTCache.java:332)
+	at org.eclipse.cdt.internal.core.model.ASTCache.getAST(ASTCache.java:165)
+	at org.eclipse.cdt.internal.core.model.ASTCache.acquireSharedAST(ASTCache.java:252)
+	at org.eclipse.cdt.internal.core.model.ASTCache.runOnAST(ASTCache.java:213)
+	at org.eclipse.cdt.internal.ui.editor.ASTProvider.runOnAST(ASTProvider.java:336)
+	at org.eclipse.cdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:170)
+	at org.eclipse.cdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:144)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.core 4 0 2016-04-23 12:41:38.936
+!MESSAGE Error in CDT Core during AST creation
+!STACK 0
+java.lang.NullPointerException
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1012)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuildConfiguration.calculateScannerInfo(ArduinoBuildConfiguration.java:615)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuildConfiguration.getScannerInfo(ArduinoBuildConfiguration.java:557)
+	at org.eclipse.cdt.arduino.core.internal.ArduinoScannerInfoProvider.getScannerInformation(ArduinoScannerInfoProvider.java:23)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getScannerInfo(TranslationUnit.java:1057)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:841)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getAST(TranslationUnit.java:831)
+	at org.eclipse.cdt.internal.core.model.ASTCache$1.run(ASTCache.java:339)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.cdt.internal.core.model.ASTCache.createAST(ASTCache.java:332)
+	at org.eclipse.cdt.internal.core.model.ASTCache.getAST(ASTCache.java:165)
+	at org.eclipse.cdt.internal.core.model.ASTCache.acquireSharedAST(ASTCache.java:252)
+	at org.eclipse.cdt.internal.core.model.ASTCache.runOnAST(ASTCache.java:213)
+	at org.eclipse.cdt.internal.ui.editor.ASTProvider.runOnAST(ASTProvider.java:336)
+	at org.eclipse.cdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup.calculateASTandInform(SelectionListenerWithASTManager.java:170)
+	at org.eclipse.cdt.internal.ui.viewsupport.SelectionListenerWithASTManager$PartListenerGroup$3.run(SelectionListenerWithASTManager.java:144)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2016-04-23 12:41:39.023
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.runtime.CoreException: Processing template board.mk
+	at org.eclipse.cdt.arduino.core.internal.ArduinoTemplateGenerator.generateFile(ArduinoTemplateGenerator.java:52)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuildConfiguration.generateMakeFile(ArduinoBuildConfiguration.java:414)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuilder.build(ArduinoBuilder.java:45)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:359)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:382)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:486)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:398)
+	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:182)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> recipe_c_combine_pattern  [in template "board.mk" at line 81, column 11]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${recipe_c_combine_pattern}  [in template "board.mk" at line 81, column 9]
+----
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:116)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:346)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:82)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:40)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.MixedContent.accept(MixedContent.java:62)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.Environment.process(Environment.java:290)
+	at freemarker.template.Template.process(Template.java:312)
+	at org.eclipse.cdt.arduino.core.internal.ArduinoTemplateGenerator.generateFile(ArduinoTemplateGenerator.java:41)
+	... 15 more
+!SUBENTRY 1 org.eclipse.cdt.arduino.core 4 0 2016-04-23 12:41:39.024
+!MESSAGE Processing template board.mk
+!STACK 0
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> recipe_c_combine_pattern  [in template "board.mk" at line 81, column 11]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${recipe_c_combine_pattern}  [in template "board.mk" at line 81, column 9]
+----
+
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:116)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:346)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:82)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:40)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.MixedContent.accept(MixedContent.java:62)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.Environment.process(Environment.java:290)
+	at freemarker.template.Template.process(Template.java:312)
+	at org.eclipse.cdt.arduino.core.internal.ArduinoTemplateGenerator.generateFile(ArduinoTemplateGenerator.java:41)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuildConfiguration.generateMakeFile(ArduinoBuildConfiguration.java:414)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuilder.build(ArduinoBuilder.java:45)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:359)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:382)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:486)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:398)
+	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:182)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.cdt.arduino.core 4 0 2016-04-23 12:41:39.024
+!MESSAGE Processing template board.mk
+!STACK 0
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> recipe_c_combine_pattern  [in template "board.mk" at line 81, column 11]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${recipe_c_combine_pattern}  [in template "board.mk" at line 81, column 9]
+----
+
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:116)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:346)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:82)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:40)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.MixedContent.accept(MixedContent.java:62)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.Environment.process(Environment.java:290)
+	at freemarker.template.Template.process(Template.java:312)
+	at org.eclipse.cdt.arduino.core.internal.ArduinoTemplateGenerator.generateFile(ArduinoTemplateGenerator.java:41)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuildConfiguration.generateMakeFile(ArduinoBuildConfiguration.java:414)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuilder.build(ArduinoBuilder.java:45)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:359)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:382)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:486)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:398)
+	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:182)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 75 2016-04-23 12:41:39.025
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.cdt.arduino.core 4 75 2016-04-23 12:41:39.025
+!MESSAGE Errors running builder 'Arduino Builder' on project 'HelloWorld'.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Processing template board.mk
+	at org.eclipse.cdt.arduino.core.internal.ArduinoTemplateGenerator.generateFile(ArduinoTemplateGenerator.java:52)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuildConfiguration.generateMakeFile(ArduinoBuildConfiguration.java:414)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuilder.build(ArduinoBuilder.java:45)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:359)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:382)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:486)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:398)
+	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:182)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> recipe_c_combine_pattern  [in template "board.mk" at line 81, column 11]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${recipe_c_combine_pattern}  [in template "board.mk" at line 81, column 9]
+----
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:116)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:346)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:82)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:40)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.MixedContent.accept(MixedContent.java:62)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.Environment.process(Environment.java:290)
+	at freemarker.template.Template.process(Template.java:312)
+	at org.eclipse.cdt.arduino.core.internal.ArduinoTemplateGenerator.generateFile(ArduinoTemplateGenerator.java:41)
+	... 15 more
+!SUBENTRY 2 org.eclipse.cdt.arduino.core 4 0 2016-04-23 12:41:39.025
+!MESSAGE Processing template board.mk
+!STACK 0
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> recipe_c_combine_pattern  [in template "board.mk" at line 81, column 11]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${recipe_c_combine_pattern}  [in template "board.mk" at line 81, column 9]
+----
+
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:116)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:346)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:82)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:40)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.MixedContent.accept(MixedContent.java:62)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.Environment.process(Environment.java:290)
+	at freemarker.template.Template.process(Template.java:312)
+	at org.eclipse.cdt.arduino.core.internal.ArduinoTemplateGenerator.generateFile(ArduinoTemplateGenerator.java:41)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuildConfiguration.generateMakeFile(ArduinoBuildConfiguration.java:414)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuilder.build(ArduinoBuilder.java:45)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:359)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:382)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:486)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:398)
+	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:182)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.cdt.arduino.core 4 0 2016-04-23 12:41:39.025
+!MESSAGE Processing template board.mk
+!STACK 0
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> recipe_c_combine_pattern  [in template "board.mk" at line 81, column 11]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${recipe_c_combine_pattern}  [in template "board.mk" at line 81, column 9]
+----
+
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:116)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:346)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:82)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:40)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.MixedContent.accept(MixedContent.java:62)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.Environment.process(Environment.java:290)
+	at freemarker.template.Template.process(Template.java:312)
+	at org.eclipse.cdt.arduino.core.internal.ArduinoTemplateGenerator.generateFile(ArduinoTemplateGenerator.java:41)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuildConfiguration.generateMakeFile(ArduinoBuildConfiguration.java:414)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuilder.build(ArduinoBuilder.java:45)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:359)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:382)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:486)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:398)
+	at org.eclipse.ui.actions.GlobalBuildAction$1.run(GlobalBuildAction.java:182)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2016-04-23 12:41:55.459
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 1
+org.eclipse.core.runtime.CoreException: Processing template board.mk
+	at org.eclipse.cdt.arduino.core.internal.ArduinoTemplateGenerator.generateFile(ArduinoTemplateGenerator.java:52)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuildConfiguration.generateMakeFile(ArduinoBuildConfiguration.java:414)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuilder.build(ArduinoBuilder.java:45)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:262)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:402)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:556)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:534)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:111)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate$1.run(LaunchConfigurationDelegate.java:430)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:437)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:130)
+	at org.eclipse.cdt.arduino.core.internal.launch.ArduinoLaunchConfigurationDelegate.buildForLaunch(ArduinoLaunchConfigurationDelegate.java:64)
+	at org.eclipse.launchbar.ui.internal.commands.BuildActiveCommandHandler$1$1.run(BuildActiveCommandHandler.java:97)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> recipe_c_combine_pattern  [in template "board.mk" at line 81, column 11]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${recipe_c_combine_pattern}  [in template "board.mk" at line 81, column 9]
+----
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:116)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:346)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:82)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:40)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.MixedContent.accept(MixedContent.java:62)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.Environment.process(Environment.java:290)
+	at freemarker.template.Template.process(Template.java:312)
+	at org.eclipse.cdt.arduino.core.internal.ArduinoTemplateGenerator.generateFile(ArduinoTemplateGenerator.java:41)
+	... 23 more
+!SUBENTRY 1 org.eclipse.cdt.arduino.core 4 0 2016-04-23 12:41:55.459
+!MESSAGE Processing template board.mk
+!STACK 0
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> recipe_c_combine_pattern  [in template "board.mk" at line 81, column 11]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${recipe_c_combine_pattern}  [in template "board.mk" at line 81, column 9]
+----
+
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:116)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:346)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:82)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:40)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.MixedContent.accept(MixedContent.java:62)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.Environment.process(Environment.java:290)
+	at freemarker.template.Template.process(Template.java:312)
+	at org.eclipse.cdt.arduino.core.internal.ArduinoTemplateGenerator.generateFile(ArduinoTemplateGenerator.java:41)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuildConfiguration.generateMakeFile(ArduinoBuildConfiguration.java:414)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuilder.build(ArduinoBuilder.java:45)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:262)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:402)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:556)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:534)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:111)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate$1.run(LaunchConfigurationDelegate.java:430)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:437)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:130)
+	at org.eclipse.cdt.arduino.core.internal.launch.ArduinoLaunchConfigurationDelegate.buildForLaunch(ArduinoLaunchConfigurationDelegate.java:64)
+	at org.eclipse.launchbar.ui.internal.commands.BuildActiveCommandHandler$1$1.run(BuildActiveCommandHandler.java:97)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.cdt.arduino.core 4 0 2016-04-23 12:41:55.459
+!MESSAGE Processing template board.mk
+!STACK 0
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> recipe_c_combine_pattern  [in template "board.mk" at line 81, column 11]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${recipe_c_combine_pattern}  [in template "board.mk" at line 81, column 9]
+----
+
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:116)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:346)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:82)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:40)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.MixedContent.accept(MixedContent.java:62)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.Environment.process(Environment.java:290)
+	at freemarker.template.Template.process(Template.java:312)
+	at org.eclipse.cdt.arduino.core.internal.ArduinoTemplateGenerator.generateFile(ArduinoTemplateGenerator.java:41)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuildConfiguration.generateMakeFile(ArduinoBuildConfiguration.java:414)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuilder.build(ArduinoBuilder.java:45)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:262)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:402)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:556)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:534)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:111)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate$1.run(LaunchConfigurationDelegate.java:430)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:437)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:130)
+	at org.eclipse.cdt.arduino.core.internal.launch.ArduinoLaunchConfigurationDelegate.buildForLaunch(ArduinoLaunchConfigurationDelegate.java:64)
+	at org.eclipse.launchbar.ui.internal.commands.BuildActiveCommandHandler$1$1.run(BuildActiveCommandHandler.java:97)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 566 2016-04-23 12:41:55.461
+!MESSAGE Errors occurred during the build.
+!SUBENTRY 1 org.eclipse.cdt.arduino.core 4 75 2016-04-23 12:41:55.461
+!MESSAGE Errors running builder 'Arduino Builder' on project 'HelloWorld'.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Processing template board.mk
+	at org.eclipse.cdt.arduino.core.internal.ArduinoTemplateGenerator.generateFile(ArduinoTemplateGenerator.java:52)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuildConfiguration.generateMakeFile(ArduinoBuildConfiguration.java:414)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuilder.build(ArduinoBuilder.java:45)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:262)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:402)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:556)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:534)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:111)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate$1.run(LaunchConfigurationDelegate.java:430)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:437)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:130)
+	at org.eclipse.cdt.arduino.core.internal.launch.ArduinoLaunchConfigurationDelegate.buildForLaunch(ArduinoLaunchConfigurationDelegate.java:64)
+	at org.eclipse.launchbar.ui.internal.commands.BuildActiveCommandHandler$1$1.run(BuildActiveCommandHandler.java:97)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: freemarker.core.InvalidReferenceException: The following has evaluated to null or missing:
+==> recipe_c_combine_pattern  [in template "board.mk" at line 81, column 11]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${recipe_c_combine_pattern}  [in template "board.mk" at line 81, column 9]
+----
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:116)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:346)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:82)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:40)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.MixedContent.accept(MixedContent.java:62)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.Environment.process(Environment.java:290)
+	at freemarker.template.Template.process(Template.java:312)
+	at org.eclipse.cdt.arduino.core.internal.ArduinoTemplateGenerator.generateFile(ArduinoTemplateGenerator.java:41)
+	... 23 more
+!SUBENTRY 2 org.eclipse.cdt.arduino.core 4 0 2016-04-23 12:41:55.461
+!MESSAGE Processing template board.mk
+!STACK 0
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> recipe_c_combine_pattern  [in template "board.mk" at line 81, column 11]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${recipe_c_combine_pattern}  [in template "board.mk" at line 81, column 9]
+----
+
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:116)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:346)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:82)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:40)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.MixedContent.accept(MixedContent.java:62)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.Environment.process(Environment.java:290)
+	at freemarker.template.Template.process(Template.java:312)
+	at org.eclipse.cdt.arduino.core.internal.ArduinoTemplateGenerator.generateFile(ArduinoTemplateGenerator.java:41)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuildConfiguration.generateMakeFile(ArduinoBuildConfiguration.java:414)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuilder.build(ArduinoBuilder.java:45)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:262)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:402)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:556)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:534)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:111)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate$1.run(LaunchConfigurationDelegate.java:430)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:437)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:130)
+	at org.eclipse.cdt.arduino.core.internal.launch.ArduinoLaunchConfigurationDelegate.buildForLaunch(ArduinoLaunchConfigurationDelegate.java:64)
+	at org.eclipse.launchbar.ui.internal.commands.BuildActiveCommandHandler$1$1.run(BuildActiveCommandHandler.java:97)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.cdt.arduino.core 4 0 2016-04-23 12:41:55.461
+!MESSAGE Processing template board.mk
+!STACK 0
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> recipe_c_combine_pattern  [in template "board.mk" at line 81, column 11]
+
+----
+Tip: If the failing expression is known to be legally refer to something that's null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${recipe_c_combine_pattern}  [in template "board.mk" at line 81, column 9]
+----
+
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:116)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:346)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:82)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:40)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.MixedContent.accept(MixedContent.java:62)
+	at freemarker.core.Environment.visit(Environment.java:312)
+	at freemarker.core.Environment.process(Environment.java:290)
+	at freemarker.template.Template.process(Template.java:312)
+	at org.eclipse.cdt.arduino.core.internal.ArduinoTemplateGenerator.generateFile(ArduinoTemplateGenerator.java:41)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuildConfiguration.generateMakeFile(ArduinoBuildConfiguration.java:414)
+	at org.eclipse.cdt.arduino.core.internal.build.ArduinoBuilder.build(ArduinoBuilder.java:45)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:262)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:402)
+	at org.eclipse.core.internal.resources.Project$1.run(Project.java:556)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Project.internalBuild(Project.java:534)
+	at org.eclipse.core.internal.resources.Project.build(Project.java:111)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate$1.run(LaunchConfigurationDelegate.java:430)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2225)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildProjects(LaunchConfigurationDelegate.java:437)
+	at org.eclipse.debug.core.model.LaunchConfigurationDelegate.buildForLaunch(LaunchConfigurationDelegate.java:130)
+	at org.eclipse.cdt.arduino.core.internal.launch.ArduinoLaunchConfigurationDelegate.buildForLaunch(ArduinoLaunchConfigurationDelegate.java:64)
+	at org.eclipse.launchbar.ui.internal.commands.BuildActiveCommandHandler$1$1.run(BuildActiveCommandHandler.java:97)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)

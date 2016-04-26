@@ -1,9 +1,3 @@
-config/atmega168_diy/boardName=ATmega168/A/P/PA/PB
-config/atmega168_diy/menu_boot=none
-config/atmega168_diy/menu_clock=16MHz
-config/atmega168_diy/menu_version=atmega168a
-config/atmega168_diy/packageName=diy_atmega8_series
-config/atmega168_diy/platformName=DIY ATmega8, ATmega48, ATmega88, ATmega168, ATmega328
 config/attinyx5/boardName=ATtiny x5 series
 config/attinyx5/menu_TimerClockSource=default
 config/attinyx5/menu_bod=disable
