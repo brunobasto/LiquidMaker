@@ -9,7 +9,7 @@
 // --------  Printer-related settings ------------
 
 // Clearance to generate between non-connected parts. If the gears print 'stuck together' or are difficult to separate, try increasing this value. If there is excessive play between them, try lowering it. (default: 0.15mm)
-tol=0.4;
+tol=0.56;
 
 // Allowed overhang for overhang removal; between 0 and 0.999 (0 = none, 0.5 = 45 degrees, 1 = infinite)
 allowed_overhang = 0.75;

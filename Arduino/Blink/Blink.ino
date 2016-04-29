@@ -1,27 +1,24 @@
-/*
-  Blink
-  Turns on an LED on for one second, then off for one second, repeatedly.
+#include <SoftwareSerial.h>
 
-  Most Arduinos have an on-board LED you can control. On the Uno and
-  Leonardo, it is attached to digital pin 13. If you're unsure what
-  pin the on-board LED is connected to on your Arduino model, check
-  the documentation at http://www.arduino.cc
+const int rx=12; //receive pin on attiny pic any
+const int tx=1; //MISO on attiny is also tx
 
-  This example code is in the public domain.
-
-  modified 8 May 2014
-  by Scott Fitzgerald
-*/
-
+SoftwareSerial mySerial(rx, tx);
 
 // the setup function runs once when you press reset or power the board
 void setup() {
-  // initialize digital pin 13 as an output.
+  // initialize digital pin 0 as an output.
   pinMode(0, OUTPUT);
+
+  mySerial.begin(9600);
 }
 
 // the loop function runs over and over again forever
 void loop() {
+  if(mySerial.available()>0){
+    mySerial.println(mySerial.read());
+  }
+  
   digitalWrite(0, HIGH);   // turn the LED on (HIGH is the voltage level)
   delay(250);              // wait for a second
   digitalWrite(0, LOW);    // turn the LED off by making the voltage LOW
